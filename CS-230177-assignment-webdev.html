@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinh Tran Bao Chau - Personal Website</title>
+  <style>
+    /* ===== BASE STYLE ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffb6c1;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    header p {
+      font-style: italic;
+      color: #fffafc;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(255, 182, 193, 0.3);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #d63384;
+      border-left: 5px solid #ffb6c1;
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== PROFILE IMAGE ===== */
+    img.profile {
+      display: block;
+      margin: 15px auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffb6c1;
+      box-shadow: 0 0 10px rgba(255, 192, 203, 0.5);
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    /* ===== LISTS & TABLE ===== */
+    ul {
+      list-style: circle;
+      margin-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #f5c6cb;
+    }
+
+    th {
+      background-color: #ffc2d1;
+      color: #fff;
+      text-align: left;
+      padding: 8px;
+    }
+
+    td {
+      padding: 8px;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      color: #d63384;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #f5c6cb;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background-color: #fffafc;
+    }
+
+    button {
+      margin-top: 15px;
+      background-color: #ffb6c1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #ff99aa;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #ffe6eb;
+      color: #d63384;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Trinh Tran Bao Chau</h1>
+    <p>Welcome to my pink world ♡</p>
+  </header>
+
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="images/avatar.jpg" alt="Trinh Tran Bao Chau" class="profile">
+      <p>Hello! My name is <strong>Your Name</strong>. I am currently a Computer Science student at Fulbright University Vietnam. I love designing clean, simple, and aesthetic web pages. Outside of coding, I enjoy art, photography, and coffee time with friends.</p>
+    </section>
+
+    <!-- EDUCATION & SKILLS SECTION -->
+    <section id="skills">
+      <h2>Education & Skills</h2>
+      <ul>
+        <li>B.S. in Computer Science – Fulbright University Vietnam</li>
+        <li>Proficient in HTML, CSS, and JavaScript</li>
+        <li>Basic design skills with Figma & Canva</li>
+        <li>Interested in front-end development and UX design</li>
+      </ul>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio">
+      <h2>My Projects</h2>
+      <table>
+        <tr><th>Project</th><th>Description</th></tr>
+        <tr><td>Personal Portfolio</td><td>A minimalist website built with HTML and CSS.</td></tr>
+        <tr><td>Note App</td><td>A notebook app created with JavaScript DOM manipulation.</td></tr>
+      </table>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="you@example.com" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name | Fulbright University Vietnam</p>
+  </footer>
+</body>
+</html>
