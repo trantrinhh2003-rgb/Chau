@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinh Tran Bao Chau - Personal Website</title>
   <style>
-    /* ===== BASE STYLE ===== */
+    /* ===== BASE ===== */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -70,7 +70,7 @@
       text-align: justify;
     }
 
-    /* ===== LISTS & TABLE ===== */
+    /* ===== TABLE ===== */
     ul {
       list-style: circle;
       margin-left: 20px;
@@ -209,7 +209,6 @@
   background-color: #ff99aa;
 }
 
-/* Dark/White Mode */
 body.white-mode {
   background-color: #ffffff;
   color: #333;
@@ -294,30 +293,28 @@ body.white-mode footer {
     <p>© 2025 Trinh Tran Bao Chau | Fulbright University Vietnam</p>
   </footer>
 <script>
-  // Lấy các phần tử HTML
+  
   const addBtn = document.getElementById("addNoteBtn");
   const noteInput = document.getElementById("noteInput");
   const notesContainer = document.getElementById("notesContainer");
 
-  // Khi người dùng nhấn nút Add Note
+  
   addBtn.addEventListener("click", function() {
     const text = noteInput.value.trim();
 
-    // Nếu không nhập gì thì cảnh báo
+    
     if (text === "") {
       alert("Please write something before adding a note!");
       return;
     }
 
-    // Tạo phần tử mới để hiển thị note
+   
     const note = document.createElement("div");
     note.classList.add("note");
     note.textContent = text;
 
-    // Thêm note vào trang
     notesContainer.appendChild(note);
 
-    // Xóa nội dung trong ô nhập
     noteInput.value = "";
   });
 </script>
