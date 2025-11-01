@@ -192,12 +192,44 @@
   margin-bottom: 10px;
   white-space: pre-wrap;
 }
-</style>
+#themeToggle {
+  background-color: #ffb6c1;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+#themeToggle:hover {
+  background-color: #ff99aa;
+}
+
+/* Dark/White Mode */
+body.white-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+body.white-mode header {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+body.white-mode footer {
+  background-color: #f7f7f7;
+  color: #666;
+}
+ </style>
 </head>
 <body>
   <header>
     <h1>Trinh Tran Bao Chau</h1>
     <p>Welcome to my pink world ♡</p>
+    <button id="themeToggle">Switch Theme</button>
   </header>
 
   <main>
@@ -288,6 +320,16 @@
     noteInput.value = "";
   });
 </script>
-
+<script>
+  const themeButton = document.getElementById("themeToggle");
+  themeButton.addEventListener("click", () => {
+    document.body.classList.toggle("white-mode");
+    if (document.body.classList.contains("white-mode")) {
+      themeButton.textContent = "Switch to Pink Mode";
+    } else {
+      themeButton.textContent = "Switch to White Mode";
+    }
+  });
+</script>
 </body>
 </html>
