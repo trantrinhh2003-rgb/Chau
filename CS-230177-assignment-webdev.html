@@ -141,6 +141,59 @@
     }
   </style>
 </head>
+/* ===== NOTEBOOK SECTION ===== */
+#notebook {
+  background-color: #fff0f5;
+  border: 1px solid #ffd6e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(255,182,193,0.3);
+}
+
+#notebook h2 {
+  color: #d63384;
+  text-align: center;
+}
+
+#noteInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+#addNoteBtn {
+  display: block;
+  margin: 10px auto;
+  background-color: #ffb6c1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+#addNoteBtn:hover {
+  background-color: #ff99aa;
+}
+
+#notesContainer {
+  margin-top: 15px;
+}
+
+.note {
+  background-color: #ffe6eb;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
 
 <body>
   <header>
@@ -178,6 +231,17 @@
     </section>
 
     <!-- CONTACT SECTION -->
+  <!-- NOTEBOOK SECTION -->
+<section id="notebook">
+  <h2>My Notebook</h2>
+  <p>You can write your thoughts or ideas here ✨</p>
+  
+  <textarea id="noteInput" rows="4" placeholder="Type your note here..."></textarea><br>
+  <button id="addNoteBtn">Add Note</button>
+
+  <div id="notesContainer"></div>
+</section>
+
     <section id="contact">
       <h2>Contact Me</h2>
       <form>
@@ -194,9 +258,37 @@
       </form>
     </section>
   </main>
-
   <footer>
     <p>© 2025 Trinh Tran Bao Chau | Fulbright University Vietnam</p>
   </footer>
+<script>
+  // Lấy các phần tử HTML
+  const addBtn = document.getElementById("addNoteBtn");
+  const noteInput = document.getElementById("noteInput");
+  const notesContainer = document.getElementById("notesContainer");
+
+  // Khi người dùng nhấn nút Add Note
+  addBtn.addEventListener("click", function() {
+    const text = noteInput.value.trim();
+
+    // Nếu không nhập gì thì cảnh báo
+    if (text === "") {
+      alert("Please write something before adding a note!");
+      return;
+    }
+
+    // Tạo phần tử mới để hiển thị note
+    const note = document.createElement("div");
+    note.classList.add("note");
+    note.textContent = text;
+
+    // Thêm note vào trang
+    notesContainer.appendChild(note);
+
+    // Xóa nội dung trong ô nhập
+    noteInput.value = "";
+  });
+</script>
+
 </body>
 </html>
